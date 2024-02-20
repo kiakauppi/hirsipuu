@@ -25,13 +25,12 @@ const newGame= () => {
     maskedWord = "*".repeat(randomizedWord.length)
     console.log(randomizedWord)
     output.innerHTML = maskedWord
-
+    numberOfGuesses = 0
 }
 
 const win = () => {
     alert(`Arvasit oikein, sana on ${randomizedWord}. Arvauskertoja oli yhteensä ${numberOfGuesses}.`)
     newGame()
-    numberOfGuesses = 0
 }
 
 const replaceFoundChars = (guess) => {
